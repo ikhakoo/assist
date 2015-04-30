@@ -11,7 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150427150034) do
+ActiveRecord::Schema.define(version: 20150430014906) do
+
+  create_table "assistants", force: :cascade do |t|
+    t.string   "start_service"
+    t.string   "end_service"
+    t.integer  "service_id"
+    t.date     "task_date"
+    t.integer  "user_id"
+    t.integer  "booking_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.date     "booking_date"
+    t.string   "booking_time"
+    t.string   "end_time"
+    t.integer  "service_id"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string   "service_type"
+    t.integer  "service_rating"
+    t.integer  "user_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"

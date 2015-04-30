@@ -1,0 +1,24 @@
+<br>
+<br>
+<br>
+<br>
+<h1>Available Services </h1>
+<br>
+<br>
+<% @services.each do |service| %>
+<div class="well">
+  <p>Name: coming soon<br>
+		 Service Type: <%= service.service_type %> <br>
+		 Service Rating: <%= service.service_rating %></p>
+		 Total Capacity: <%= service.capacity %></p>
+	</p>
+	
+	<p class="btn btn-default">
+		<%= link_to 'Make a Booking', "/services/#{service.id}/bookings/#{{booking.id}}" %>
+	</p>	
+	<br>
+	<br>
+</div>
+</div>
+<% end %>
+

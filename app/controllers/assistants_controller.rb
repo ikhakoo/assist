@@ -1,0 +1,3 @@
+class AssistantsController < ApplicationController
+	
+end

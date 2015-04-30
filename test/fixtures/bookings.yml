@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  booking_date: 2015-04-29
+  booking_time: MyString
+  end_time: MyString
+  service_id: 1
+  user_id: 1
+
+two:
+  booking_date: 2015-04-29
+  booking_time: MyString
+  end_time: MyString
+  service_id: 1
+  user_id: 1
